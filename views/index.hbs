@@ -1,0 +1,20 @@
+<h1>Hello, {{name}} {{#if surname}} {{surname}} {{/if}}</h1>
+{{#if surname}}
+  <h2>Your surname is {{surname}}</h2>
+{{else}}
+  <p>You didn't register with a surname</p>
+{{/if}}
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit,
+  accusamus!</p>
+{{! Escape HTML }}
+{{{button}}}
+<h3>Your hobbies:</h3>
+<ul>
+  {{#each hobbies}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+{{#unless address}}
+  <p>Please write your address</p>
+  <input type="text" placeholder="Address" />
+{{/unless}}
